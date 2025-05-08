@@ -153,3 +153,15 @@ INSERT INTO api_ct_bcton (TonDau, PhatSinh, TonCuoi, MaBCTon_id, MaSach_id) VALU
 (12, 1, 13, 1, 5),  -- Harry Potter: Tồn đầu 12, phát sinh 1, tồn cuối 13
 (6, 2, 8, 1, 6);    -- Từ Điển Toán Học: Tồn đầu 6, phát sinh 2, tồn cuối 8
 
+-- Báo cáo công nợ tháng 5 năm 2025
+INSERT INTO api_baocaocongno (Thang, Nam)
+VALUES (5, 2025);
+
+-- Chi tiết báo cáo công nợ cho 6 khách hàng
+INSERT INTO api_ct_bccongno (NoDau, PhatSinh, NoCuoi, MaBCCN_id, MaKH_id) VALUES
+(0,    50000,  30000, 1, 1),  -- Khách 1: nợ phát sinh 50k, đã trả 20k
+(0,    50000,  50000, 1, 2),  -- Khách 2: nợ mới
+(0,   120000, 100000, 1, 3),  -- Khách 3: nợ cũ trả bớt
+(0,        0,      0, 1, 4),  -- Khách 4: không phát sinh
+(0,    20000,      0, 1, 5),  -- Khách 5: phát sinh và trả hết
+(0,  1250000, 750000, 1, 6);  -- Khách 6: nợ lớn, trả một phần
