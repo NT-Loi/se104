@@ -15,8 +15,8 @@ class CreateUserView(generics.CreateAPIView):
 class SachListCreate(generics.ListCreateAPIView):
     queryset = Sach.objects.all()
     serializer_class = SachSerializer
-    # permission_classes = [IsAuthenticated]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
+    # permission_classes = [AllowAny]
 
     def perform_create(self, serializer):
         try:
@@ -27,5 +27,5 @@ class SachListCreate(generics.ListCreateAPIView):
 class SachDelete(generics.DestroyAPIView):
     queryset = Sach.objects.all()
     serializer_class = SachSerializer
-    # permission_classes = [IsAuthenticated]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
+    # permission_classes = [AllowAny]
